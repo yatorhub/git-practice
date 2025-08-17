@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header, main, footer {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: #004466;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #999;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #004466;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        input[type="submit"]:hover {
+            background: #006699;
+        }
+        img, video {
+            max-width: 100%;
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced HTML5 Content & Form Demo</h1>
+    <p>Organized content with lists, tables, media, and a validated HTML5 form.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Our Services</h2>
+        <ul>
+            <li>Web Design & Development</li>
+            <li>Responsive Mobile Apps</li>
+            <li>SEO & Digital Marketing</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Price List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Duration</th>
+                    <th>Price (KES)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Website Design</td>
+                    <td>2 weeks</td>
+                    <td>50,000</td>
+                </tr>
+                <tr>
+                    <td>Mobile App Development</td>
+                    <td>1 month</td>
+                    <td>120,000</td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>3 weeks</td>
+                    <td>35,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Media Showcase</h2>
+        <img src="https://via.placeholder.com/800x300" alt="Sample Project Image">
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+    <section>
+        <h2>Contact & Service Request Form</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254700000000" 
+                       pattern="^\+254[0-9]{9}$" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service Details</legend>
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">--Please choose--</option>
+                    <option value="web">Website Design</option>
+                    <option value="app">Mobile App Development</option>
+                    <option value="seo">SEO Optimization</option>
+                </select>
+
+                <label for="budget">Estimated Budget (KES):</label>
+                <input type="number" id="budget" name="budget" min="1000" max="1000000" required>
+
+                <label for="deadline">Preferred Deadline:</label>
+                <input type="date" id="deadline" name="deadline" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="message">Project Description:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Describe your project..." required></textarea>
+
+                <label>
+                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Submit Request">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Web Solutions Kenya. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
